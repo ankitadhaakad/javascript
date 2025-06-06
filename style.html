@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>manipulating styles with the help of js</title>
+</head>
+<body>
+    <div class="old" id="box">
+        <p id="tag" style="color: blue;">these is old class</p>
+    </div>
+    <div id="box">
+        <p id="text" style="color: white;">these is pRra</p>
+    </div>
+    <script>
+let a=document.getElementById("box");//it allows to use css with camel case sinario
+let b=document.getElementById("text");
+//a.style.backgroundColor="green";
+//a.style.height="200px";
+//a.style.width="200px";
+//a.style.border="10px solid red";
+a.style.cssText="background-color:black;width:100px;height:100px;border:10px solid grey;border-radius:5px";
+let style=window.getComputedStyle(b);
+console.log(style.color);
+console.log(style.border);
+let p=document.getElementById("tag");
+console.log(p.className);
+p.className="new class value";
+console.log(p.className);
+    </script>
+
+</body>
+</html>

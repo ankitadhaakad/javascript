@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="https://www.google.com" id="link">go to google</a></br></br>
+    <img id="photo" src="https://images.pexels.com/photos/9694217/pexels-photo-9694217.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="image load" height="100px" width="100px"></br></br>
+    <input id="user" type="text" placeholder="enter user name">
+
+    <script>
+        let photo = document.getElementById("photo");
+        let p = photo.getAttribute("src");
+        console.log(p);
+
+        let element = document.getElementById("link");
+        element.setAttribute("href", "https://www.paruluniversity.in");
+        let value = element.getAttribute("href");
+        console.log(value);
+
+        let u=document.getElementById("user");
+        let v=u.hasAttribute("placeholder");
+        let w=u.removeAttribute("type");
+        console.log(w);
+        console.log(v);
+    </script>
+</body>
+</html>

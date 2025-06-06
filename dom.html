@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="result">ankita</p>
+    
+   male: <input type="radio" value="result" name="gender">
+   female:<input type="radio" value="result" name="gender">
+   <p>hi ankita these side</p>
+   <p>javascript for beginnerfriendly</p>
+   <p class="baman">you are baman</p>
+   <p class="chaman">you are chaman</p>
+   <p class="me">i am</p>
+   <p class="me">you are</p>
+   
+  <script>
+        const value=document.getElementById("result");
+        console.log(value.innerText);
+        const result=document.getElementsByName("gender");
+        console.log(result.length);
+        console.log(result[0]);
+        console.log(result[1]);
+        const result1=document.getElementsByTagName("p");
+        const value1=result1[1].innerText;
+        
+        console.log(result1);
+        console.log(value1);
+        const result3=document.getElementsByClassName("chaman");
+        console.log(result3[0].innerText);
+
+        const result4=document.querySelector(".me");
+        console.log(result4);
+        const result5=document.querySelectorAll(".me");
+        console.log(result5);
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="use">use</div>
+    <script>
+const use=document.getElementById("use");
+use.addEventListener("click",()=>{
+    const use=document.createElement("div");
+    use.innerText="i am a div";
+
+use.style.cssText="background-color:pink;height:100px;width:100px";
+document.body.append(use);
+})
+    </script>
+</body>
+</html>

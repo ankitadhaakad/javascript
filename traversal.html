@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="outer">
+        <p id="inner">this is inner!</p>
+    </div>
+    <div id="container">
+        <p>para1</p>
+        <p>para2</p>
+        <p>para3</p>
+    </div>
+    <div>
+        <h2>heading</h2>
+        <p id="res">these is para</p>
+        <span>end of era.</span>
+    </div>
+    <!--selecting parent element jb hum kisi element k immidiate parent element ko select krenge-->
+    <script>
+        let para=document.getElementById("inner");
+        let result6=para.parentElement;
+        console.log(result6.id);
+
+        let box=document.getElementById("container");
+        console.log(box.children.length);
+        console.log(box.childNodes);
+        console.log(box.firstElementChild.innerText);
+        console.log(box.lastElementChild.innerText);
+
+        //selecting child element:
+        // 1.element.children-return html elements
+        //  2.element.child node-return all node types
+        //  3.element.firstelementchild-return first element child 
+        // 4.element.lastelementchild=return last element child.
+
+        //sibling
+        let head=document.getElementById("res");
+        let next=head.nextElementSibling;
+        console.log(next);
+        console.log(next.tagName);
+        let previous=head.previousElementSibling;
+        console.log(previous);
+        console.log(previous.tagName);
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent">
+        <div id="child">CLICK ME</div>
+        <div id="new">first</div>
+        <!--<btn id="use">user</btn>-->
+    </div>
+    <script>
+        //document.getElementById("parent").addEventListener("click",function(){
+         //   console.log("parent clicked");
+    //    },true);
+       // document.getElementById("child").addEventListener("click",function(){
+    //        console.log("child clicked");
+   //     });
+  // btn onclick=function greet(){
+   // alert("hello");
+   //}
+        function sayhi(){
+            alert("helloooo howwwwww areee youuuuuu")
+        }
+        let btn=document.getElementById("new");
+        btn.addEventListener("click",sayhi);
+        setTimeout(()=>{
+            btn.removeEventListener("click",sayhi);
+        },5000);
+
+        
+    </script>
+</body>
+</html>

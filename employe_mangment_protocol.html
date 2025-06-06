@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management Portal</title>
+    <style>
+
+
+    body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 30px;
+    background-color: white;
+    color: black;
+    border: 5px solid black;
+}
+
+h2 {
+    color: black;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+form input,
+form button {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+form button {
+    background-color: navy;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: navy;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background-color: navy;
+    color: darkgoldenrod;
+}
+
+th,
+td {
+    padding: 12px 16px;
+    border: 1px solid whitesmoke;
+    text-align: left;
+}
+
+.action-btns {
+    display: flex;
+    gap: 8px;
+}
+
+.action-btns button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.action-btns button:first-child {
+    background-color: palevioletred; 
+    color: white;
+}
+
+.action-btns button:first-child:hover {
+    background-color: palevioletred;
+}
+
+.action-btns button:last-child {
+    background-color: red; 
+    color: white;
+}
+
+.action-btns button:last-child:hover {
+    background-color: red;
+}
+</style>
+
+    
+</head>
+
+<body>
+    <h2>Employee Management Portal</h2>
+    <form id="employee-form">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="text" id="role" placeholder="Role" required>
+        <button type="submit">Add Employee</button>
+    </form>
+
+
+
+
+    <table id="employee-table">
+
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+
+
+
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

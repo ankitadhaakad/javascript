@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+</head>
+<body>
+
+    <div id="msg">
+        <p id="para">this is paragraph</p>
+
+        <p class="home">homehere</p>
+        <p class="research">research here</p>
+        <p class="contant">content here</p>
+    </div>
+    <script>
+        //1
+        let newPara=document.createElement("p");
+        newPara.innerHTML="hy how are you";
+        document.getElementById("msg").appendChild(newPara);
+
+        //2
+        let result=document.getElementsByClassName("home");
+        console.log(result);
+    </script>
+</body>
+</html>

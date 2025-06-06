@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--<div id="box"></div>
+    <div id="msg"></div>
+    <p id="target">this isn original</p>
+    <div id="outer">Hii!!</div>
+    <div id="time">
+        <p id="old">old child</p>
+    </div>-->
+    <ul id="fruits">
+    <li>orange</li>
+    </ul>
+
+
+    <script>
+        /*let newdiv=document.createElement("div");
+        newdiv.textContent="hello world";
+        document.getElementById("box").appendChild(newdiv);
+
+        document.getElementById("msg").innerHTML="<p>this is para<strong>graph</strong></p>" 
+        let newP=document.createElement("p");
+        newP.textContent="hy how are you?";
+        document.getElementById("target").after(newP);
+
+        let box=document.getElementById("target");
+        box.append("these is new paragraph",document.createElement("hr"));//hr used to underline
+        box.prepend("you are here",document.createElement("hr"));//prepand is used to add tag first
+
+        document.getElementById("outer").insertAdjacentHTML("afterbegin","<p>this is insert after begin</p>");
+
+        //let meow=document.createElement("p");
+        //meow.textContent="New One";
+        //let oldP=document.getElementById("old");
+      //  document.getElementById("time").replaceChild(meow,oldP);
+
+       // let copy=document.getElementById("time").cloneNode(true);
+       // document.body.appendChild(copy);
+
+        let remove=document.getElementById("time");
+        remove.removeChild();*/
+
+        let newli=document.createElement("li");
+        newli.textContent="grapes";
+        let list=document.getElementById("fruits");
+        let first=list.firstElementChild;
+        list.insertBefore(newli,first);
+
+
+        
+
+
+
+    </script>
+</body>
+</html>

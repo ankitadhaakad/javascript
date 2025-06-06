@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="btn" class="primary">click me</div>
+    <script>
+        let btn=document.getElementById("btn");
+        //add
+        btn.classList.add("rounded");
+        //remove
+        btn.classList.remove("primary");
+        //toogle
+        btn.classList.toggle("active");
+        //contains
+        console.log(btn.classList.contains("active"));
+    </script>
+</body>
+</html>
