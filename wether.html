@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Current Weather Info</title>
+</head>
+<body>
+  <h2>Current Weather Data</h2>
+  <ul id="weather-data">Loading...</ul>
+
+  <script>
+    const apiURL = "https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,rain,showers,snowfall,cloud_cover,pressure_msl,wind_speed_10m,wind_direction_10m,wind_gusts_10m,surface_pressure,weather_code";
+
+    fetch(apiURL)
+      .then(res => res.json())
+      .then(data => {
+        const current = data.current;
+        const list = document.getElementById("weather-data");
+        list.innerHTML = ""; 
+        for (let key in current) {
+          const li = document.createElement("li");
+          li.textContent = `${key}: ${current[key]}`;
+          list.appendChild(li);
+        }
+      })
+      .catch(err => {
+        console.error("Error:", err);
+        document.getElementById("weather-data").innerHTML = "<li>Error fetching data</li>";
+      });
+  </script>
+</body>
+</html>
